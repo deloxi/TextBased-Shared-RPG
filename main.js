@@ -5,7 +5,9 @@
 fetchInject([
     "https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js",
     "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js",
-    "utils/log.js"
+    "utils/log.js",
+    "entity/entity.js",
+    "entity/player.js"
 ]).then(()=> {
     console.log("External libs all loaded!!");
     initWorld();
@@ -28,6 +30,9 @@ function initWorld() {
 */
 function initPlayer() {
     log("Generate player.");
+    let player = new Player("Kalle", 1, "Druid");
+    log(player.status());
+    log(player.dead());
 }
 
 /*
