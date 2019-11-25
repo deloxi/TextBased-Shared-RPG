@@ -1,2 +1,8 @@
 # TextBased-Shared-RPG
-Textbased rpg with multiple creators
+## Brainstorm
+* Space
+* Medival
+* Knights
+* Mermaids
+* Animal
+* Monsterperson
