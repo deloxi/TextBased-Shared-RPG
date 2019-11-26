@@ -4,10 +4,11 @@
 */
 fetchInject([
     "https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js",
-    "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js",
+    "https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.8.16/dayjs.min.js",
     "utils/log.js",
     "entity/entity.js",
-    "entity/player.js"
+    "entity/player.js",
+    "world/clock.js"
 ]).then(()=> {
     console.log("External libs all loaded!!");
     initWorld();
@@ -18,8 +19,12 @@ fetchInject([
 /* 
     INIT WORLD
 */
+var worldTime;
+
 function initWorld() {
+    worldTime = new WorldTime(dayjs("1117-11-17 11:17:00"));
     log("World has started");
+    log(worldTime.getTime());
     initPlayer();
 }
 
