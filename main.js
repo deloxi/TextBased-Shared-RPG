@@ -37,7 +37,7 @@ function initPlayer() {
     log("Generate player.");
     let player = new Player("Kalle", 1, "Druid");
     log(player.status());
-    log(player.dead());
+    log(player.name +" that is a " + player.race + " was born in the year "+ player.wasBornInYear());
 }
 
 /*
